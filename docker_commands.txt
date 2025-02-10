@@ -1,4 +1,4 @@
-docker build -t docker_iamge_name
+docker build -t docker_iamge_name .
 
 docker run -p 5000:5000 docker_iamge_name:latest
 
@@ -9,3 +9,8 @@ docker container ls -a
 docker image rmi imageid
 
 docker container rm containerId
+
+Use the docker ps -a command to list all containers
+Use the docker ps -a -q command to get the IDs of all containers
+Use the docker stop $(docker ps -a -q) command to stop all containers
+Use the docker rm $(docker ps -a -q) command to remove all containers
